@@ -1,0 +1,426 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e0ffe0, #fffff0);
+    color: #2d2d2d;
+}
+
+/* Navigation bar */
+nav {
+    background: #2f4f4f;
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #f0e68c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #7fffd4;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #7fffd4;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Section styling */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 200px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #228b22;
+    margin-bottom: 20px;
+}
+
+/* Group heading style */
+.group-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.group-heading h1 {
+    font-size: 3rem;
+    color: #2e8b57;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+.group-heading .subtitle {
+    font-size: 1.2rem;
+    color: #4f7942;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Schedule table */
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+}
+
+.schedule th, .schedule td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: #3cb371;
+    color: white;
+}
+
+.schedule tr:nth-child(even) {
+    background-color: #f0fff0;
+}
+
+/* Member Cards */
+.member-card {
+    display: inline-block;
+    width: 220px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    background: #fefefe;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    background-color: #f5fff5;
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #3cb371;
+}
+
+.profile-button {
+    background-color: #228b22;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.profile-button:hover {
+    background-color: #32cd32;
+}
+
+/* Profile page */
+.profile-img {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3cb371;
+}
+
+.member-profile {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.member-profile a {
+    text-decoration: none;
+    color: #2e8b57;
+    font-size: 1em;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* About Paragraph Styling */
+.about-card {
+    background-color: #f5fff5;
+    border-left: 6px solid #228b22;
+    padding: 20px 25px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    font-size: 1.05em;
+    line-height: 1.7em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-card strong {
+    color: #2e8b57;
+}
+
+/* Announcements */
+.announcement-list {
+    list-style-type: disc;
+    padding-left: 40px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #2f4f4f;
+}
+
+form input, form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #228b22;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #6b8e23;
+}
+
+/* Social Links */
+.social {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.social a {
+    color: #2e8b57;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #ffd700;
+}
+
+/* Tablet layout (portrait and landscape, ≤768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    section {
+        padding: 40px 20px;
+        margin: 30px auto;
+        border-radius: 10px;
+    }
+
+    .group-heading h1 {
+        font-size: 2rem;
+    }
+
+    .group-heading .subtitle {
+        font-size: 1rem;
+    }
+
+    .member-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .schedule {
+        font-size: 0.95em;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1rem;
+    }
+
+    .about-card {
+        font-size: 1em;
+        padding: 15px;
+    }
+}
+
+/* Mobile layout (phones ≤480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .group-heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .group-heading .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .member-card {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .member-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-card {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+
+    .schedule th, .schedule td {
+        padding: 8px;
+        font-size: 0.85em;
+    }
+
+    button,
+    .profile-button {
+        padding: 10px;
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .top-btn {
+        bottom: 20px;
+        right: 20px;
+        font-size: 1em;
+        padding: 8px 14px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1em;
+    }
+}
