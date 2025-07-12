@@ -386,6 +386,50 @@ section#members h2 {
 }
 
 /* ----------------------------- */
+/* Land Acknowledgment Section   */
+/* ----------------------------- */
+.land-acknowledgment {
+  background-color: #f5fff5;
+  border-left: 6px solid #228b22;
+  padding: 30px 25px;
+  margin: 50px auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.land-acknowledgment h2 {
+  font-size: 2rem;
+  color: #2e8b57;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.land-acknowledgment p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .land-acknowledgment {
+    padding: 20px 15px;
+    margin: 40px 10px;
+  }
+
+  .land-acknowledgment h2 {
+    font-size: 1.5rem;
+  }
+
+  .land-acknowledgment p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ----------------------------- */
 /* Responsive Adjustments         */
 /* ----------------------------- */
 
