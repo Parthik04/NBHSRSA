@@ -1,70 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Our Group Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Group Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="members.html">Members</a></li>
-            <li><a href="announcement.html">Announcements</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Page 1: Home -->
-    <section id="home">
-        <div class="group-heading">
-            <img src="img/group.jpg" alt="Group Logo" class="logo" />
-            <h1>Welcome to NBHSRSA</h1>
-            <p class="subtitle">
-                NBHS-RSA | Led by a racialized students alliance across NB | Building equity, community & change in our
-                schools | Youth voice. Real impact.
-            </p>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="announcement.html">Announcements</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-            <!-- ✅ Small Group Photo -->
-            <div class="group-photo-wrapper">
-                <img src="" alt="Our Group Photo" class="group-photo-small" />
-            </div>
-        </div>
+  <!-- Main Content Section -->
+  <section id="home">
 
-        <h2>Availability Schedule</h2>
+    <!-- Group Heading -->
+    <div class="group-heading">
+      <!-- Group Logo Image -->
+      <img src="img/group.jpg" alt="Group Logo" class="logo" />
 
-        <table class="schedule">
-            <tr>
-                <th>Day</th>
-                <th>Availability</th>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>9 AM - 5 PM</td>
-            </tr>
-            <tr>
-                <td>Tuesday</td>
-                <td>9 AM - 5 PM</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td>9 AM - 5 PM</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-                <td>9 AM - 5 PM</td>
-            </tr>
-            <tr>
-                <td>Friday</td>
-                <td>9 AM - 3 PM</td>
-            </tr>
-        </table>
-    </section>
+      <h1>Welcome to NBHSRSA</h1>
+      <p class="subtitle">
+        NBHS-RSA | Led by a racialized students alliance across NB | Building equity, community & change in our schools | Youth voice. Real impact.
+      </p>
+
+      <!-- Clickable Group Photo for Lightbox -->
+      <img
+        src="img/NBHSRSA.jpg"
+        alt="Our Group Photo"
+        class="group-photo-small"
+        id="galleryImg"
+        title="Click to enlarge"
+      />
+    </div>
+
+    <!-- Vision and Mission Cards -->
+    <div class="vision-mission">
+      <div class="card vision-card">
+        <h2>Our Vision</h2>
+        <p>
+          We envision a New Brunswick where high school students of every background feel empowered to lead,
+          confident in their voices, and fully represented in the decisions that shape their lives.
+          A province where diversity isn’t just acknowledged, but embraced as essential to a just and thriving school culture.
+        </p>
+      </div>
+
+      <div class="card mission-card">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to center and elevate the lived experiences of racialized students by fostering inclusive
+          leadership, creating safe spaces for dialogue and support, and driving systemic change through youth-led action.
+          We believe in the power of community, collaboration, and courageous conversations to build a better future—starting in our schools.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Lightbox Overlay -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="Expanded Group Photo" />
+  </div>
+
+  <!-- Link external JavaScript -->
+  <script src="script.js"></script>
 </body>
-
 </html>
+
+
+  <!-- JavaScript to handle Lightbox -->
+  <!-- <script>
+    const galleryImg = document.getElementById('galleryImg');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // When the group photo is clicked, show lightbox with larger image
+    galleryImg.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = galleryImg.src;
+    });
+
+    // Close lightbox when 'X' is clicked
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    // Close lightbox if user clicks outside the image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+  </script> -->
+  
